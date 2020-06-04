@@ -1,0 +1,18 @@
+%nav.navbar.navbar-expand-lg.navbar-dark.bg-dark
+  .container
+    %a.navbar-brand{:href => root_path} VideoCalls
+    %button.navbar-toggler{"aria-controls" => "navbarsExample07", "aria-expanded" => "false", "aria-label" => "Toggle navigation", "data-target" => "#navbarsExample07", "data-toggle" => "collapse", :type => "button"}
+      %span.navbar-toggler-icon
+    #navbarsExample07.collapse.navbar-collapse
+      %ul.navbar-nav.mr-auto
+        %li.nav-item.active
+          %a.nav-link{:href => root_path}
+            Home
+        %li.nav-item
+          - if current_user
+            %a.nav-link{:href => user_root_path } Profile
+      .my-2.my-md-0.nav-item
+        - if current_user
+          = link_to 'Sign out', destroy_user_session_path, style: 'color:white', method: :delete
+        - else
+          = link_to 'Sign in', new_user_session_path, style: 'color:white'

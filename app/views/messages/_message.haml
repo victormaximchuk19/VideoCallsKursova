@@ -1,0 +1,7 @@
+.my-2.px-2
+  %p
+    = message.user.name + ':'
+    %br
+    = message.content
+  %p.small
+    = message.created_at.strftime("%H:%M %Y-%m-%d")

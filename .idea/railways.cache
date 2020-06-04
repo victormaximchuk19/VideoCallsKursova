@@ -1,0 +1,33 @@
+do /home/victor/projects/VideoCall-React-Component---Tutorial/bin/bundle exec /home/victor/.rvm/rubies/ruby-2.5.1/bin/ruby /home/victor/projects/VideoCall-React-Component---Tutorial/bin/rake routes --trace 
+Ruby enVironment Manager 1.29.9 (latest) (c) 2009-2017 Michal Papis, Piotr Kuczynski, Wayne E. Seguin
+
+                   Prefix Verb   URI Pattern                                                                              Controller#Action
+         new_user_session GET    /users/sign_in(.:format)                                                                 devise/sessions#new
+             user_session POST   /users/sign_in(.:format)                                                                 devise/sessions#create
+     destroy_user_session DELETE /users/sign_out(.:format)                                                                devise/sessions#destroy
+        new_user_password GET    /users/password/new(.:format)                                                            devise/passwords#new
+       edit_user_password GET    /users/password/edit(.:format)                                                           devise/passwords#edit
+            user_password PATCH  /users/password(.:format)                                                                devise/passwords#update
+                          PUT    /users/password(.:format)                                                                devise/passwords#update
+                          POST   /users/password(.:format)                                                                devise/passwords#create
+ cancel_user_registration GET    /users/cancel(.:format)                                                                  devise/registrations#cancel
+    new_user_registration GET    /users/sign_up(.:format)                                                                 devise/registrations#new
+   edit_user_registration GET    /users/edit(.:format)                                                                    devise/registrations#edit
+        user_registration PATCH  /users(.:format)                                                                         devise/registrations#update
+                          PUT    /users(.:format)                                                                         devise/registrations#update
+                          DELETE /users(.:format)                                                                         devise/registrations#destroy
+                          POST   /users(.:format)                                                                         devise/registrations#create
+               user_chats GET    /users/:user_id/chats(.:format)                                                          chats#index
+                          POST   /users/:user_id/chats(.:format)                                                          chats#create
+                user_chat GET    /users/:user_id/chats/:id(.:format)                                                      chats#show
+                 messages POST   /messages(.:format)                                                                      messages#create
+                user_root GET    /users/profile(.:format)                                                                 users#profile
+              users_index GET    /users/all(.:format)                                                                     users#index
+                     root GET    /                                                                                        home#index
+                    calls POST   /calls(.:format)                                                                         calls#create
+                                 /cable                                                                                   #<ActionCable::Server::Base:0x000056445b45b848 @mutex=#<Monitor:0x000056445b45b820 @mon_owner=nil, @mon_count=0, @mon_mutex=#<Thread::Mutex:0x000056445b45b7d0>>, @pubsub=nil, @worker_pool=nil, @event_loop=nil, @remote_connections=nil>
+       rails_service_blob GET    /rails/active_storage/blobs/:signed_id/*filename(.:format)                               active_storage/blobs#show
+rails_blob_representation GET    /rails/active_storage/representations/:signed_blob_id/:variation_key/*filename(.:format) active_storage/representations#show
+       rails_disk_service GET    /rails/active_storage/disk/:encoded_key/*filename(.:format)                              active_storage/disk#show
+update_rails_disk_service PUT    /rails/active_storage/disk/:encoded_token(.:format)                                      active_storage/disk#update
+     rails_direct_uploads POST   /rails/active_storage/direct_uploads(.:format)                                           active_storage/direct_uploads#create

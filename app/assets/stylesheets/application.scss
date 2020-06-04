@@ -1,0 +1,15 @@
+ video{
+    transform: rotateY(180deg);
+    -webkit-transform:rotateY(180deg); /* Safari and Chrome */
+    -moz-transform:rotateY(180deg); /* Firefox */
+ }
+
+.main_bg {
+  background: #F2F8FD;
+}
+.radius10 {
+  border-radius: 10px;
+}
+@import "bootstrap";
+@import "header";
+@import 'chats';

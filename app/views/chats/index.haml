@@ -1,0 +1,19 @@
+Recent chats:
+%ul
+  - if @existing_chats_users
+    - @existing_chats_users.each do |other_user|
+      - if other_user != current_user
+        %lo
+          = image_tag other_user.avatar, size: '30x30'
+          = link_to(user_chats_path(current_user, :other_user => other_user.id), method: :post, style: 'color:black') do
+            = other_user.name
+            = other_user.surname
+All Users:
+%ul
+  - User.all.each do |other_user|
+    - if other_user != current_user
+      %lo
+        = image_tag other_user.avatar, size: '30x30'
+        = link_to(user_chats_path(current_user, :other_user => other_user.id), method: :post, style: 'color:black') do
+          = other_user.name
+          = other_user.surname

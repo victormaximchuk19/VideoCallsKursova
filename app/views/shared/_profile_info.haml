@@ -1,0 +1,14 @@
+.w100
+  .row
+    .col-4
+      .profile_info.d-inline-block.pt-2
+        .row
+          .col-6
+            .avatar_section
+              = image_tag current_user.avatar, size: '120x120' if current_user.avatar.attached?
+          .col-6.d-flex
+            %span
+              = current_user.name
+            .pl-1
+              = current_user.surname
+    .col-8

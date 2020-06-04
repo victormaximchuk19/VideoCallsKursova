@@ -1,0 +1,14 @@
+%div.main_chat.m-auto
+  %h5
+    Chat with #{@other_user.name}
+    = link_to 'Call', calls_root_path
+  %hr
+  - if @chat.messages.any?
+    #messages.chat_window.overflow-auto.bg-white
+      = render partial: 'messages/message', collection: @chat.messages.order(id: :asc)
+  - else
+    #messages.chat_window.overflow-auto.bg-white
+  = render partial: 'messages/message_form', locals: {message: @message, chat: @chat}
+:javascript
+  createMessageChannel();
+  messageForm();
